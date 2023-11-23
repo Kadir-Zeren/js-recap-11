@@ -140,3 +140,12 @@ const toplaminiAl = (...sayilar) => {
 };
 
 console.log("SONUC:", toplaminiAl(2, 5, 10, 4, 6, 8));
+
+const ucanAraclar = ["drone", "heli", "ucak"];
+const karaAraclari = ["Tir", "Araba", "Kamyonet", "Bisiklet"];
+const tasitlar = [ucanAraclar, karaAraclari];
+console.log(tasitlar);
+console.log(tasitlar[0][1]);
+
+const tasitlar1 = [...ucanAraclar, ...karaAraclari];
+console.log(tasitlar1);
