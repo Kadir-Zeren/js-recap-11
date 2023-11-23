@@ -81,3 +81,29 @@ team.forEach((person) => {
   console.log("AGE:", age);
   console.log("***********");
 });
+
+const getProduct = () => {
+  return {
+    id: "123",
+    pName: "NIKE",
+    price: 300,
+    stock: 1000,
+  };
+};
+console.log(getProduct());
+let { pName, price, stock } = getProduct();
+console.log("PRODUCT NAME:", pName, "PRICE", price);
+
+stock = stock - 100;
+console.log("REMAINING STOCK:", stock);
+
+// const print = function (data) {
+//   const { id, pName, price } = data;
+//   console.log(pName, price);
+// };
+const print = function ({ pName, price }) {
+  console.log(pName, price);
+};
+
+const data = { id: "123", pName: "NIKE", price: 300 };
+print(data);
