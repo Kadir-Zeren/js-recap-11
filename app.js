@@ -107,3 +107,10 @@ const print = function ({ pName, price }) {
 
 const data = { id: "123", pName: "NIKE", price: 300 };
 print(data);
+
+const names = ["Ahmet", "Mehmet", "İsmet", "Saffet"];
+const ismet = names[2];
+console.log(ismet);
+
+const [ahmo, , ismo, safo] = names;
+console.log(ahmo, ismo, safo);
