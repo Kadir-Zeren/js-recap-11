@@ -178,12 +178,61 @@
 // theirNumbers.push(8);
 // console.log(theirNumbers, hisNumbers);
 
-const firstObj = { a: 1, b: 2, c: 3 };
-const secondObj = { a: 2, d: 3, c: 4 };
-const copiedFirstObj = { ...firstObj };
-console.log(copiedFirstObj);
-copiedFirstObj.a = 44;
-console.log(copiedFirstObj, firstObj);
+// const firstObj = { a: 1, b: 2, c: 3 };
+// const secondObj = { a: 2, d: 3, c: 4 };
+// const copiedFirstObj = { ...firstObj };
+// console.log(copiedFirstObj);
+// copiedFirstObj.a = 44;
+// console.log(copiedFirstObj, firstObj);
 
-const combinedObjs = { ...firstObj, ...secondObj };
-console.log(combinedObjs);
+// const combinedObjs = { ...firstObj, ...secondObj };
+// console.log(combinedObjs);
+
+const people = {
+  person1: {
+    name: "Can",
+    surname: "Canan",
+    dob: "1990",
+    job: "developer",
+    salary: "140000",
+    drivingLicense: true,
+  },
+  person2: {
+    name: "John",
+    surname: "Sweet",
+    dob: "1990",
+    job: "tester",
+    salary: "110000",
+    drivingLicense: false,
+  },
+  person3: {
+    name: "Steve",
+    surname: "Job",
+    dob: "2000",
+    job: "developer",
+    salary: "90000",
+    drivingLicense: true,
+  },
+};
+
+console.log("MAAS:", people.person3.salary);
+
+for (let p in people) {
+  console.log(people[p].salary);
+}
+console.log("********");
+
+console.log(Object.keys(people));
+console.log(Object.values(people));
+console.log(Object.entries(people));
+console.log("********");
+
+for (let key of Object.keys(people)) {
+  console.log(key);
+}
+
+console.log("********");
+
+for (let v of Object.values(people)) {
+  console.log(v.salary);
+}
