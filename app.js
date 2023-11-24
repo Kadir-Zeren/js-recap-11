@@ -97,10 +97,10 @@
 // stock = stock - 100;
 // console.log("REMAINING STOCK:", stock);
 
-// // const print = function (data) {
-// //   const { id, pName, price } = data;
-// //   console.log(pName, price);
-// // };
+// const print = function (data) {
+//   const { id, pName, price } = data;
+//   console.log(pName, price);
+// };
 // const print = function ({ pName, price }) {
 //   console.log(pName, price);
 // };
@@ -115,65 +115,75 @@
 // const [ahmo, , ismo, safo] = names;
 // console.log(ahmo, ismo, safo);
 
-const araclar = ["bmw", "merso", "ferrari", "rover", "lambo"];
-const [araba1, araba2, araba3, ...geriKalanlar] = araclar;
-console.log(araba1);
-console.log(geriKalanlar);
+// const araclar = ["bmw", "merso", "ferrari", "rover", "lambo"];
+// const [araba1, araba2, araba3, ...geriKalanlar] = araclar;
+// console.log(araba1);
+// console.log(geriKalanlar);
 
-const kisi = {
-  ad: "Canan",
-  soyad: "Cano",
-  yas: 33,
-  meslek: "tester",
-};
-const { meslek, yas, ...bilgi } = kisi;
-console.log(meslek, yas);
-console.log(bilgi);
-console.log(kisi);
+// const kisi = {
+//   ad: "Canan",
+//   soyad: "Cano",
+//   yas: 33,
+//   meslek: "tester",
+// };
+// const { meslek, yas, ...bilgi } = kisi;
+// console.log(meslek, yas);
+// console.log(bilgi);
+// console.log(kisi);
 
-const topla = (a, b) => a + b;
-console.log("SONUC:", topla(2, 5, 10, 4));
+// const topla = (a, b) => a + b;
+// console.log("SONUC:", topla(2, 5, 10, 4));
 
-const toplaminiAl = (...sayilar) => {
-  console.log(sayilar);
-  return sayilar.reduce((t, v) => t + v, 0);
-};
+// const toplaminiAl = (...sayilar) => {
+//   console.log(sayilar);
+//   return sayilar.reduce((t, v) => t + v, 0);
+// };
 
-console.log("SONUC:", toplaminiAl(2, 5, 10, 4, 6, 8));
+// console.log("SONUC:", toplaminiAl(2, 5, 10, 4, 6, 8));
 
-const ucanAraclar = ["drone", "heli", "ucak"];
-const karaAraclari = ["Tir", "Araba", "Kamyonet", "Bisiklet"];
-const tasitlar = [ucanAraclar, karaAraclari];
-console.log(tasitlar);
-console.log(tasitlar[0][1]);
+// const ucanAraclar = ["drone", "heli", "ucak"];
+// const karaAraclari = ["Tir", "Araba", "Kamyonet", "Bisiklet"];
+// const tasitlar = [ucanAraclar, karaAraclari];
+// console.log(tasitlar);
+// console.log(tasitlar[0][1]);
 
-const tasitlar1 = [...ucanAraclar, "Kamyon", ...karaAraclari];
-console.log(tasitlar1);
+// const tasitlar1 = [...ucanAraclar, "Kamyon", ...karaAraclari];
+// console.log(tasitlar1);
 
-const cumle = "Olmak ya da olmamak";
-const karakter = [...cumle];
-console.log(karakter);
-console.log(cumle);
+// const cumle = "Olmak ya da olmamak";
+// const karakter = [...cumle];
+// console.log(karakter);
+// console.log(cumle);
 
-console.log("MAX:", Math.max(1, 3, 4, -1, 4));
-const rakamlar = [23, 45, 66, 77, 12, -1];
-console.log("MIN:", Math.min(...rakamlar));
+// console.log("MAX:", Math.max(1, 3, 4, -1, 4));
+// const rakamlar = [23, 45, 66, 77, 12, -1];
+// console.log("MIN:", Math.min(...rakamlar));
 
-const myNumbers = [4, 5, 6, [11, 22]];
-const herNumbers = [1, 2, 3, ...myNumbers];
-const hisNumbers = [...herNumbers];
-console.log("*******");
-console.log(herNumbers, myNumbers);
-console.log("*******");
-console.log(hisNumbers);
-console.log("*******");
-hisNumbers.push(7);
-console.log("MY:", myNumbers);
-console.log("*******");
-console.log("HER:", herNumbers);
-console.log("*******");
-console.log("HIS:", hisNumbers);
-myNumbers[3][1] = 44;
-const theirNumbers = hisNumbers;
-theirNumbers.push(8);
-console.log(theirNumbers, hisNumbers);
+// const myNumbers = [4, 5, 6, [11, 22]];
+// const herNumbers = [1, 2, 3, ...myNumbers];
+// const hisNumbers = [...herNumbers];
+// console.log("*******");
+// console.log(herNumbers, myNumbers);
+// console.log("*******");
+// console.log(hisNumbers);
+// console.log("*******");
+// hisNumbers.push(7);
+// console.log("MY:", myNumbers);
+// console.log("*******");
+// console.log("HER:", herNumbers);
+// console.log("*******");
+// console.log("HIS:", hisNumbers);
+// myNumbers[3][1] = 44;
+// const theirNumbers = hisNumbers;
+// theirNumbers.push(8);
+// console.log(theirNumbers, hisNumbers);
+
+const firstObj = { a: 1, b: 2, c: 3 };
+const secondObj = { a: 2, d: 3, c: 4 };
+const copiedFirstObj = { ...firstObj };
+console.log(copiedFirstObj);
+copiedFirstObj.a = 44;
+console.log(copiedFirstObj, firstObj);
+
+const combinedObjs = { ...firstObj, ...secondObj };
+console.log(combinedObjs);
